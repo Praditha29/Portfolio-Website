@@ -14,27 +14,28 @@
             <a href="#" class="logo">Portfolio</a>
 
             <nav class="navbar">
-                <a href="#" style="--i:1" class="active">Home</a>
-                <a href="#" style="--i:2">About Me</a>
-                <a href="#" style="--i:3">Skill</a>
-                <a href="#" style="--i:4">Portfolio</a>
-                <a href="#" style="--i:5">Contact</a>
+                <a href="#home" style="--i:1" class="active">Home</a>
+                <a href="#about" style="--i:2">About Me</a>
+                <a href="#skills" style="--i:3">Skill</a>
+                <a href="#projects" style="--i:4">Projects</a>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer" style="--i:4"> Portfolio </a>
+                <a href="#contact" style="--i:6">Contact</a>
             </nav>
 
         </header>
-        <section class="home">
+        <section class="home" id="home">
             <div class="home-content">
                 <h3>Hello! Welcome to my Portfolio</h3><br>
                 <h1>N. Praditha Reddy</h1><br>
                 <h3>And I'm a <span class="text"></span></h3> <br>
                 <p>Cybersecurity student studing in MIT ADT University, Pune</p>
                 <div class="home-sci">
-                    <a href="#" style="--i:7"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#" style="--i:8"><i class='bx bxl-github' ></i></a>
-                    <a href="#" style="--i:9"><i class='bx bxl-gmail' ></i></a>
-                    <a href="#" style="--i:10 "><i class='bx bxl-medium' ></i></a>
+                    <a href="https://www.linkedin.com/in/praditha-reddy-2555152a2" style="--i:7"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Praditha29" style="--i:8"><i class='bx bxl-github' ></i></a>
+                    <a href="#contact" style="--i:9"><i class='bx bxl-gmail' ></i></a>
+                    <a href="https://medium.com/@pradithareddy" style="--i:10 "><i class='bx bxl-medium' ></i></a>
                 </div>
-                <a href="#" class="btn-box">More About Me</a>
+                <a href="#about" class="btn-box">More About Me</a>
             </div>  
             <div class="home-img">
                 <img src="myphoto.png" alt="Praditha Reddy">
@@ -60,10 +61,10 @@
             </div>
         </section>
 
-        <section>
+        <section id="skills">
             <div class="services" id="services">
                 <div class="container">
-                    <h1 class="sub-title">My <span>Services</span></h1>
+                    <h1 class="sub-title">My Skill<span> Set</span></h1>
                     <div class="services-list">
                         <div>
                             <i class='bx bxs-terminal' style='color:#c53cff' ></i>
@@ -95,8 +96,8 @@
         </section>
         <h1 class="sub-title">My <span>Skills</span></h1>
 
-        <section>
-            <div class="container1" id="Skills">
+        <section id="skills">
+            <div class="container1">
                 <h1 class="heading1">Technical <span>Skills</span></h1>
                 <div class="Technical-bars">
                     <div class="bar"><i class='bx bxl-html5' style='color:#c95d2e'  ></i> 
@@ -195,12 +196,12 @@
             </div>
         </section>
 
-        <section>
-            <div id="portfolio" id="project">
-                <div class="main-text" id="project">
+        <section id="projects">
+            <div>
+                <div class="main-text" id="projects">
                     <h2>Latest <span>Projects</span></h2>
 
-                    <div class="portfolio-content">
+                    <div class="project-content">
                         <div class="row">
                             <img src="2millionHTB.jpg"> 
                             <div class="layer">
@@ -231,7 +232,7 @@
         </section>
 
 
-        <section class="contact" id="contact">
+        <section id="contact" class="contact">
             <div class="contact-text">
                 <h2>Contact <span>Me</span></h2>
                 <h4>Let's work Together</h4>
@@ -244,17 +245,27 @@
                         <a href=""><i class='bx bxl-linkedin'></i></a>
                     </div>
             </div>
-            <div class="contact-form">
-                <form action="">
-                    <input type="" placeholder="Enter your Name" required>
-                    <input type="email" placeholder="Enter your Email" required>
+                <div class="contact-form">
 
-                    <input type="" placeholder="Enter your Subject">
-                    <textarea name="" id="" cols="40" rows="10" placeholder="Enter your Message" required></textarea>
-                    <input type="submit" value="Submit" class="send">
-                </form>
-            </div>
+                    <form id="contact-form">
+
+                        <input type="text" name="name" placeholder="Enter your Name" required>
+                        <input type="email" name="email" placeholder="Enter your Email" required>
+                        <input type="text" name="subject" placeholder="Enter your Subject" required>
+                        <textarea name="message" placeholder="Enter your Message" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address." required></textarea>
+                        <input type="submit" value="Send Message" class="send">
+                    </form>
+
+                </div>
+        <!-- EmailJS -->
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script> emailjs.sendForm(
+                    "service_q132c1o",
+                    "template_y1rhj6g",
+                    this,
+                    "8SlSrogLbgR7pNTsO") 
+            </script>
         <script src="main.js"></script>
     </body>
 </html>

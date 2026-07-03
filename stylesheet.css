@@ -884,9 +884,7 @@ section{
 
 }
 
-/* =======================================
-        TABLETS (1024px and below)
-======================================= */
+/* Tablet Responsiveness */
 
 @media (max-width:1024px){
 
@@ -909,6 +907,7 @@ section{
     gap:40px;
 }
 
+
 .container1{
     width:100%;
     margin-left:0;
@@ -925,9 +924,7 @@ section{
 
 }
 
-/* =======================================
-            MOBILE
-======================================= */
+/* Mobile Responsiveness */
 
 @media (max-width:768px){
 

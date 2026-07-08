@@ -47,9 +47,10 @@ form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     emailjs.sendForm(
-        "service_q132c1o",
-        "template_y1rhj6g",
-        this
+    "service_q132c1o",
+    "template_y1rhj6g",
+    this,
+    "8SlSrogLbgR7pNTsO"
     )
     .then(() => {
         
